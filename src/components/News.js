@@ -17,7 +17,7 @@ class News extends Component {
   }
 
   async updateNews() {
-    const apiUrl = `http://api.mediastack.com/v1/news?country=${this.props.country}&category=${this.props.category}&access_key=8ab5d43225c1018e86f09093d7343300&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const apiUrl = `http://api.mediastack.com/v1/news?access_key=8ab5d43225c1018e86f09093d7343300&countries=${this.props.country}&keywords=${this.props.category}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     try {
       let response = await fetch(apiUrl);
