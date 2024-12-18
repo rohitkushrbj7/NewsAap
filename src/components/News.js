@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
+import { key } from "../apikey";
 
 class News extends Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class News extends Component {
   }
 
   async updateNews() {
-    const apiUrl = `http://api.mediastack.com/v1/news?access_key=8ab5d43225c1018e86f09093d7343300&countries=${this.props.country}&keywords=${this.props.category}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
+    const apiUrl = `http://api.mediastack.com/v1/news?access_key=${key.apikey}&countries=${this.props.country}&keywords=${this.props.category}&page=${this.state.page}&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     try {
       let response = await fetch(apiUrl);
