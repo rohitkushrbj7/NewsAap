@@ -60,7 +60,7 @@ class News extends Component {
             this.state.articles.map((article) => (
               <div className="col-md-4" key={article.url}>
                 <NewsItem
-                  title={article.title || "No Title Available"}
+                  title={article.title || "No Title Available"}   
                   description={
                     article.description || "No Description Available"
                   }
