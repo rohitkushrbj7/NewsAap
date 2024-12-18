@@ -30,7 +30,7 @@ class News extends Component {
       });
     } catch (error) {
       console.error("Error fetching data:", error);
-      this.setState({ loading: false });
+      this.setState({ loading: false });    
     }
   }
 
