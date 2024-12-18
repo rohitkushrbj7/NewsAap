@@ -68,6 +68,7 @@ class News extends Component {
                     article.image ||
                     "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704931200&semt=sph"
                   }
+                  // update http to https request 
                   newsUrl={article.url}
                   author={article.author || "Unknown"}
                   date={article.published_at}
